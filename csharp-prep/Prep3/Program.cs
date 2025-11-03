@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Prep3 World!");
+        int x = 10;
+        int y = x++;
+        Console.WriteLine($"x = {x}, y = {y}");
     }
 }
