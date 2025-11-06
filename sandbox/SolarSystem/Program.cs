@@ -11,10 +11,13 @@
         venus._name = "Venus";
         venus._diameter = 45;
 
-        mercury.DisplayPlanetInformation();
+        Planet earth = new Planet();
+        earth._name = "Earth";
+        earth._diameter = 240;
 
         SolarSystem solarSystem = new SolarSystem();
         solarSystem._solarSystem.Add(mercury);
         solarSystem._solarSystem.Add(venus);
+        solarSystem._solarSystem.Add(earth);
     }
 }
