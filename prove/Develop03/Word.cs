@@ -9,8 +9,40 @@ class Word
         _isHidden = false;
     }
 
+    public bool IsHidden()
+    {
+        return _isHidden;
+    }
+
+    public void HideWord()
+    {
+        _isHidden = true;
+    }
+
+    private string LocalGetWordString()
+    {
+        if (_isHidden)
+        {
+            string newString = "";
+            foreach(char c in _word)
+            {
+                newString += "_";
+            }
+            return newString;
+        }
+        else
+        {
+            return _word;
+        }
+    }
+
+    public string GetWordString()
+    {
+        return LocalGetWordString();
+    }
+
     public void DisplayWord()
     {
-        Console.WriteLine(_word);
+        Console.Write(LocalGetWordString());
     }
 }
