@@ -249,6 +249,17 @@
             ],
             "problemMatcher": "$msCompile"
         },
-
+        {
+            "label": "build-ReferenceApp",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ReferenceApp.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
     ]
 }

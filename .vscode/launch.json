@@ -249,6 +249,17 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
+        {
+            "name": "ReferenceApp",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-ReferenceApp",
+            "program": "${workspaceFolder}/ReferenceApp/bin/Debug/net8.0/ReferenceApp.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/ReferenceApp",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
     ]
 }
