@@ -1,33 +1,27 @@
 class Menu
 {
+    public string[] _menuStrings = {
+        "Menu Options:",
+        "1. Create Goal",
+        "2. List Goals",
+        "3. Save Goals",
+        "4. Load Goals",
+        "5. Record Event",
+        "6. Quit"
+    };
+
     public int DisplayMenu()
     {
-        int response = 0;
-
-        while (response < 1 || response > 6)
+        int _input = 0;
+        
+        do
         {
-            Console.WriteLine("Menu Options:");
-            Console.WriteLine("1. Create Goal");
-            Console.WriteLine("2. List Goals");
-            Console.WriteLine("3. Save Goals");
-            Console.WriteLine("4. Load Goals");
-            Console.WriteLine("5. Record Event");
-            Console.WriteLine("6. Quit");
-
-            try
+            foreach (string menuItem in _menuStrings)
             {
-                response = int.Parse(Console.ReadLine());
+                Console.WriteLine(menuItem);
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Invalid Input");
-            }
-        }
-        return response;
-    }
-
-    public int DisplayCreateGoalMenu()
-    {
-        return 0;
+            _input = int.Parse(Console.ReadLine());
+        }while (_input < 1 || _input > 5);
+        return _input;
     }
 }
