@@ -4,37 +4,54 @@ class Program
 {
     static void Main(string[] args)
     {
-        Menu journalMenu = new Menu();
+        Menu _journalMenu = new Menu();
 
-        int userSelection;
+        Journal _journal = new Journal();
+        GeneratePrompt _promptGenerator = new GeneratePrompt();
 
-        bool done = false;
+        int _userSelection;
+        bool _done = false;
 
         do
         {
-            userSelection = journalMenu.ProcessMenu();
+            _userSelection = _journalMenu.ProcessMenu();
 
-            switch (userSelection)
+            switch (_userSelection)
             {
                 case 1:
-                //create new entry object
-                //call create on object
-                //add entry to journal
+                string _prompt = _promptGenerator.GetRandomPrompt();
+                Console.WriteLine(_prompt);
+                string _response = Console.ReadLine();
+                Console.WriteLine();
+
+                JournalEntry _entry = new JournalEntry();
+                _entry._date = DateTime.Now.ToShortDateString();
+                _entry._prompt = _prompt;
+                _entry._response = _response;
+                _journal.AddEntry(_entry);
                     break;
+
                 case 2:
-                //call journal.Display
+                _journal.DisplayEntries();
                     break;
+
                 case 3:
-                //save to file
+                Console.Write("Filename: ");
+                _journal.SaveEntry(Console.ReadLine());
+                Console.WriteLine();
                     break;
+
                 case 4:
-                //read from file
+                Console.WriteLine("Filename: ");
+                _journal.LoadEntry(Console.ReadLine());
+                Console.WriteLine();
                     break;
+
                 case 5:
-                    done = true;
+                    _done = true;
                     break;
             }
 
-        } while (!done);
+        } while (!_done);
     }
 }
