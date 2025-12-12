@@ -1,7 +1,5 @@
 class ScriptureReference
 {
-    List<Scripture> _scriptures = new List<Scripture>();
-
     private string _book;
     private int _chapter;
     private int _verse;
@@ -20,7 +18,7 @@ class ScriptureReference
         _book = book;
         _chapter = chapter;
         _verse = verse;
-        _endVerse = verse;
+        _endVerse = endVerse;
     }
 
     public string TextToDisplay()

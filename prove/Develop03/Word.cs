@@ -19,30 +19,15 @@ class Word
         _isHidden = true;
     }
 
-    private string LocalGetWordString()
+    public string DisplayWord()
     {
-        if (_isHidden)
+        if (_isHidden == true)
         {
-            string newString = "";
-            foreach(char c in _word)
-            {
-                newString += "_";
-            }
-            return newString;
+            return "_";
         }
         else
         {
             return _word;
         }
-    }
-
-    public string GetWordString()
-    {
-        return LocalGetWordString();
-    }
-
-    public void DisplayWord()
-    {
-        Console.Write(LocalGetWordString());
     }
 }
