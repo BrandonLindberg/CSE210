@@ -52,6 +52,6 @@ class Program
                     break;
             }
 
-        } while (!_done);
+        } while (_done == false);
     }
 }
