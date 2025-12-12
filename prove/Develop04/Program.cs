@@ -16,18 +16,18 @@ class Program
             switch (_userSelection)
             {
                 case 1:
+                    new Breathing().RunActivity();
                     break;
 
                 case 2:
+                    new Reflection().RunActivity();
                     break;
 
                 case 3:
+                    new Listing().RunActivity();
                     break;
 
                 case 4:
-                    break;
-
-                case 5:
                     _done = true;
                     break;
             }

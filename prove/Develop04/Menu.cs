@@ -19,7 +19,7 @@ class Menu()
                 Console.WriteLine(menuItem);
             }
             _userSelection = int.Parse(Console.ReadLine());
-        } while (_userSelection < 1 || _userSelection > 5);
+        } while (_userSelection < 1 || _userSelection > 4);
         return _userSelection;
     }
 }
