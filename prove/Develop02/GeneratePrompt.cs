@@ -2,9 +2,11 @@ public class GeneratePrompt
 {
     private List<string> _prompts = new List<string>()
     {
-        "Prompt 1",
-        "Prompt 2",
-        "Prompt 3"
+        "What made you smile today?",
+        "How was your mood today?",
+        "What are you looking forward to doing tomorrow?",
+        "What is the coolest thing you saw today?",
+        "What is something you learned today?"
     };
 
     public string GetRandomPrompt()
