@@ -1,0 +1,1 @@
+This is a Health Calculator that allows you to calculate your BMI, Daily Caloric Intake Estimate, and Target Heart Rate. The program will prompt you to enter your information when you start. Height must be in meters and weight must be in kilograms.

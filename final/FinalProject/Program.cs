@@ -11,9 +11,9 @@ class Program
         _manager.AddCalculator(new CalorieCalculator());
         _manager.AddCalculator(new HeartRateCalculator());
 
-        bool _quit = false;
+        bool _done = false;
 
-        while (_quit == false)
+        while (_done == false)
         {
             Console.Clear();
             _manager.DisplayMenu();
@@ -22,7 +22,7 @@ class Program
 
             if (input == "0")
             {
-                _quit = true;
+                _done = true;
                 continue;
             }
 
