@@ -11,10 +11,10 @@ class Program
         {
             Console.Clear();
             Console.WriteLine(_scripture.GetDisplayText());
-            Console.WriteLine("\nPress enter to hide words or type quit to exit");
+            Console.WriteLine("\nPress enter to hide words or type 0 to exit");
 
             string _input = Console.ReadLine();
-            if (_input == "quit")
+            if (_input == "0")
             {
                 break;
             }
